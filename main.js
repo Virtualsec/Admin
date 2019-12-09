@@ -1,9 +1,9 @@
 
 
-function getClient(){
-    console.log("Piyush_Ele")
-   
-    axios.get("http://kamlesh-work.herokuapp.com/client")
+function getClient() {
+  console.log("Piyush_Ele")
+
+  axios.get("http://kamlesh-work.herokuapp.com/client")
     .then(res => showClient(res))
     .catch(err => console.log(err))
 }
@@ -11,30 +11,29 @@ function getClient(){
 
 
 function delClient() {
-    console.log("Deleted")
-    // axios
-    //   .delete('http://kamlesh-work.herokuapp.com/client/1"')
-    //   .then(res => console.log(res))
-    //   .catch(err => console.error(err));
-  }
-
-
-function showClient(res){
-    var obj = JSON.stringify(res);
-  document.getElementById('dispClients').innerHTML =`
-  <h6>${obj}</h6>
-
-    // <tr>
-    // <th>${res.data.id}</th>
-    // <td>${res.data.name}</td>
-    // <td>${res.data.mobileNo}</td>
-    // <td>${res.data.address}</td>
-    // <td>${res.data.Work}</td>
-    // </tr>
-  
-`;
+  console.log("Deleted")
+  // axios
+  //   .delete('http://kamlesh-work.herokuapp.com/client/1"')
+  //   .then(res => console.log(res))
+  //   .catch(err => console.error(err));
 }
-  
+
+
+function showClient({ data }) {
+  const tbody = document.querySelector('table tbody')
+  output = '';
+  data.forEach(client => {
+    output += `<tr>
+    <th>${client._id}</th>
+    <td>${client.name}</td>
+    <td>${client.mobileNo}</td>
+    <td>${client.address}</td>
+    <td>${client.work}</td>
+    </tr>`;
+  });
+  tbody.innerHTML = output;
+}
+
 
 
 
