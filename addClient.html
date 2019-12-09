@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Piyush Ele</title>
+
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"/>
+</head>
+<body>
+        <div class="container my-4">
+            <div class="text-center">
+                    <a href="/index.html">
+                        <h1 class="display-5 text-center mb-3">Piyush Electric</h1>
+                    </a>
+                <a href="/showClient.html">
+                    <button class="btn btn-primary my-3"  >Get all clients</button>
+                </a>
+                <a href="/addClient.html">
+                    <button class="btn btn-danger my-3"  >Add new clients</button>
+                </a>
+                <hr>
+                <h3 class="display-5 text-center text-danger mb-3">New Client</h3>
+                    <div class="container w-75">
+                        <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label>Client ID</label>
+                        <input type="text" class="form-control"  placeholder="Client ID">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label >Date</label>
+                        <input type="date" class="form-control" placeholder="Date">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Name</label>
+                        <input id="name" type="text" class="form-control" placeholder="Client Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Contact</label>
+                        <input id="mobile" type="text" class="form-control" placeholder="Client Number">
+                    </div>
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Area</label>
+                        <input id="area" class="form-control" placeholder="Area Name" list="areaList">
+                        <datalist id="areaList">
+                            <option>Global City</option>
+                            <option>Y.K Nagar</option>
+                            <option>HDIL Layout</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label>Building</label>
+                        <input id="buildingName" class="form-control" list="buildingList" placeholder="Work Name">
+                           <datalist id="buildingList">
+
+                           </datalist>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label>Wing</label>
+                        <input id="wing" type="text" class="form-control" placeholder="Wing Name" list="wingList">
+                        <datalist id="wingList"></datalist>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label>Room</label>
+                        <input id="room" type="text" class="form-control" placeholder="Room Number" list="roomNo">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label>Work</label>
+                        <input id="work" class="form-control" list="workList" placeholder="Work Name">
+                        <datalist id="workList">
+                            <option>Electric</option>
+                            <option>Plumbing</option>
+                            <option>Hardware</option>
+                            <option>Reparing</option>
+                        </datalist>
+                        
+                    </div>
+                    
+                    <div class="form-group col-md-6">
+                        <label>Goods</label>
+                        <input id="goods" class="form-control" list="boolen" placeholder="Yes/No">
+                        <datalist id="boolen">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </datalist>
+                    </div>
+                    </div>
+                  </form>
+                </div>  
+                <button  class="btn btn-danger my-3" id="add">Add Client</button>
+            </div>
+        </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="/client.js"></script>
+</body>
+</html>
